@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Backbone</title>
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+	<div class="alert">Please upload a dataset</div>
+
+	<div class="bar">
+		<label class="file"><input id="dataset" type="file" value=""></label>
+		<input id="search" type="text" placeholder="example" value="" autocomplete="off">
+	</div>
+
+	<div id="results"></div>
+
+	<script type="text/template" id="list-template">
+	<ul>
+		<% _.each(list, function(item) { %>
+		<li><%= item %></li>
+		<% }); %>
+	</ul>
+	</script>
+
+	<script src="js/lib/jquery-1.9.0.js"></script>
+	<script src="js/lib/underscore-1.4.4.js"></script>
+	<script src="js/lib/backbone-0.9.10.js"></script>
+
+	<script src="js/main.js"></script>
